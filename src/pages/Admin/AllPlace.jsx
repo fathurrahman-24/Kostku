@@ -41,7 +41,7 @@ const AllPlace = () => {
               onClick={() => navigate("/admin/add-place")}
               className="bg-coklate"
             >
-              Add Place
+              Tambah Kost
             </Button>
             <div className="flex space-x-2 rounded-lg">
               <select
@@ -76,14 +76,14 @@ const AllPlace = () => {
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300" />
             {/* <input
               type="text"
-              placeholder="Cari Place"
+              placeholder="Cari Kost"
               className="w-full pl-10 pr-3 py-2 border rounded"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             /> */}
             <Input
               className="bg-white w-full pl-10 pr-3 py-2 border rounded"
-              placeholder="Cari Place"
+              placeholder="Cari Kost"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -93,7 +93,7 @@ const AllPlace = () => {
             <thead>
               <tr className="border-b">
                 <th className="text-left p-2 text-black">No</th>
-                <th className="text-left p-2 text-black">image</th>
+                <th className="text-left p-2 text-black">Foto</th>
                 <th className="text-left p-2 text-black">Nama</th>
                 <th className="text-left p-2 text-black">Aksi</th>
               </tr>

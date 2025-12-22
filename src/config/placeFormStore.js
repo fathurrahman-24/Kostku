@@ -7,6 +7,8 @@ const usePlaceFormStore = create((set) => ({
     address: "",
     googleMapsLink: "",
     image: "",
+    roomPrice: "",
+    roomStatus: "available",
   },
   imgPreview: null,
   setFormData: (formType, formValue) =>
@@ -25,6 +27,8 @@ const usePlaceFormStore = create((set) => ({
         address: "",
         googleMapsLink: "",
         image: "",
+        roomPrice: "",
+        roomStatus: "available",
       },
       imgPreview: null,
     })),

@@ -13,6 +13,17 @@ const ReviewGambar = () => {
   const navigate = useNavigate();
   const [rating, setRating] = useState('');
   const [comment, setComment] = useState('');
+  const formatPrice = (value) =>
+    new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0,
+    }).format(value || 0);
+  const statusLabel = {
+    available: "Tersedia",
+    booked: "Terisi",
+    maintenance: "Perbaikan",
+  };
 
   // Custom toast configuration
   const toastConfig = {
@@ -35,7 +46,7 @@ const ReviewGambar = () => {
         const places = await getPlaceById(id);
         setData(places);
       } catch (error) {
-        toast.error("Gagal memuat data tempat", toastConfig);
+        toast.error("Gagal memuat data kost", toastConfig);
       }
     };
     fetchData();
@@ -118,7 +129,7 @@ const ReviewGambar = () => {
         ← Kembali
       </Button>
 
-      {/* Informasi tempat */}
+        {/* Informasi kost */}
       <div className="mt-8 space-y-6">
         <h1 className="text-3xl font-bold text-[#a04925]">{data.name}</h1>
 
@@ -137,8 +148,18 @@ const ReviewGambar = () => {
           <div className="lg:col-span-2 space-y-4">
             {/* Alamat */}
             <div>
-              <h3 className="text-lg font-semibold text-[#a04925]">Alamat</h3>
+              <h3 className="text-lg font-semibold text-[#a04925]">Alamat Kost</h3>
               <p className="text-gray-700">{data.address}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-[#a04925]">Harga Kamar</h3>
+              <p className="text-gray-700">{formatPrice(data.roomPrice)}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-[#a04925]">Status Kamar</h3>
+              <p className="text-gray-700">{statusLabel[data.roomStatus] || "Tidak tersedia"}</p>
             </div>
 
             {/* Maps */}
@@ -159,7 +180,7 @@ const ReviewGambar = () => {
         {/* Informasi lengkap */}
         <div className="bg-white p-6 rounded-md shadow-md">
           <h2 className="text-xl font-semibold text-[#a04925] mb-4">
-            Informasi Lengkap
+            Informasi Kost
           </h2>
           <p className="text-gray-700 text-justify">{data.description}</p>
         </div>
@@ -214,6 +235,13 @@ const ReviewGambar = () => {
                 className="bg-[#a04925] text-white px-4 py-2 rounded-md hover:bg-[#82391d] transition"
               >
                 Lihat Ulasan
+              </Button>
+              <Button 
+                type="button"
+                onClick={() => navigate(`/pemesanan/${id}`)}
+                className="bg-[#a04925] text-white px-4 py-2 rounded-md hover:bg-[#82391d] transition"
+              >
+                Pesan Kamar
               </Button>
             </div>
           </form>

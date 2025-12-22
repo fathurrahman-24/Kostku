@@ -15,6 +15,17 @@ const ReviewGambar = () => {
   const [error, setError] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
+  const formatPrice = (value) =>
+    new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0,
+    }).format(value || 0);
+  const statusLabel = {
+    available: "Tersedia",
+    booked: "Terisi",
+    maintenance: "Perbaikan",
+  };
 
   // Toast configuration
   const toastConfig = {
@@ -48,8 +59,8 @@ const ReviewGambar = () => {
         setReviews(Array.isArray(reviewResponse.data) ? reviewResponse.data : []);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError("Gagal memuat data tempat atau ulasan");
-        toast.error("Gagal memuat data tempat atau ulasan", toastConfig);
+        setError("Gagal memuat data kost atau ulasan");
+        toast.error("Gagal memuat data kost atau ulasan", toastConfig);
       } finally {
         setIsLoading(false);
       }
@@ -91,7 +102,7 @@ const ReviewGambar = () => {
           onClick={() => navigate("/daftar-tempat")}
           className="bg-[#a04925] text-white px-4 py-2 rounded-md hover:bg-[#82391d] transition"
         >
-          Kembali ke Daftar Tempat
+          Kembali ke Daftar Kost
         </Button>
       </div>
     );
@@ -112,7 +123,7 @@ const ReviewGambar = () => {
         <h1 className="text-3xl font-bold text-[#a04925]">{data.name}</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Place Image */}
+          {/* Kost Image */}
           <div className="lg:col-span-1">
             <img
               src={`https://findyourplace-backend-production.up.railway.app/uploads/${data.image}`}
@@ -124,11 +135,21 @@ const ReviewGambar = () => {
             />
           </div>
 
-          {/* Place Information */}
+          {/* Kost Information */}
           <div className="lg:col-span-2 space-y-4">
             <div>
-              <h3 className="text-lg font-semibold text-[#a04925]">Alamat</h3>
+              <h3 className="text-lg font-semibold text-[#a04925]">Alamat Kost</h3>
               <p className="text-gray-700">{data.address || "Alamat tidak tersedia"}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-[#a04925]">Harga Kamar</h3>
+              <p className="text-gray-700">{formatPrice(data.roomPrice)}</p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-[#a04925]">Status Kamar</h3>
+              <p className="text-gray-700">{statusLabel[data.roomStatus] || "Tidak tersedia"}</p>
             </div>
 
             <div>
@@ -157,7 +178,7 @@ const ReviewGambar = () => {
 
           {reviews.length === 0 ? (
             <div className="text-center text-gray-500 py-4">
-              <p>Belum ada ulasan untuk tempat ini.</p>
+              <p>Belum ada ulasan untuk kost ini.</p>
               <p className="mt-2 text-sm">Jadilah yang pertama memberi ulasan!</p>
             </div>
           ) : (
@@ -196,6 +217,12 @@ const ReviewGambar = () => {
           >
             Kembali
           </Button> 
+          <Button
+            onClick={() => navigate(`/pemesanan/${id}`)}
+            className="mt-4 ml-3 bg-[#a04925] text-white px-4 py-2 rounded-md hover:bg-[#82391d] transition"
+          >
+            Pesan Kamar
+          </Button>
         </div>
       </div>
     </div>

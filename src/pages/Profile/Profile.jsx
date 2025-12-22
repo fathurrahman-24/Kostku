@@ -75,11 +75,11 @@ const Profile = () => {
         borderRadius="md"
       >
         <Heading as="h1" size="md" color="orange.500">
-          FindYourPlace
+          Kostku
         </Heading>
         <HStack spacing={8}>
-          <Text>Home</Text>
-          <Text>Daftar Tempat</Text>
+          <Text>Beranda</Text>
+          <Text>Daftar Kost</Text>
           <Text>Tentang Kami</Text>
           <Text>Kontak</Text>
         </HStack>

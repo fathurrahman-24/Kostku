@@ -88,11 +88,11 @@ const EditProfile = () => {
         borderRadius="md"
       >
         <Heading as="h1" size="md" color="orange.500">
-          FindYourPlace
+          Kostku
         </Heading>
         <HStack spacing={8}>
-          <Text color="black">Home</Text>
-          <Text color="black">Daftar Tempat</Text>
+          <Text color="black">Beranda</Text>
+          <Text color="black">Daftar Kost</Text>
           <Text color="black">Tentang Kami</Text>
           <Text color="black">Kontak</Text>
         </HStack>

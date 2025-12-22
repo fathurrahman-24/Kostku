@@ -159,14 +159,14 @@ const DashboardAdmin = () => {
       color: "blue.500"
     },
     {
-      title: "Total Places",
-      description: "Total Tempat yang telah dimasukan Admin",
+      title: "Total Kost",
+      description: "Total kost yang telah dimasukkan admin",
       count: dashboardData.places,
       color: "green.500"
     },
     {
-      title: "Total Reviews",
-      description: "Total review yang telah diulas user",
+      title: "Total Ulasan",
+      description: "Total ulasan yang diberikan penghuni",
       count: dashboardData.reviews,
       color: "purple.500"
     }

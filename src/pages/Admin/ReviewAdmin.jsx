@@ -26,7 +26,7 @@ const UserAdmin = () => {
             userName:
               review.userId.name || review.userId.email || "Unknown User",
             userEmail: review.userId.email || "Unknown Email",
-            placeName: review.placeId.name || "Unknown Place",
+            placeName: review.placeId.name || "Unknown Kost",
           };
         });
 
@@ -143,7 +143,7 @@ const UserAdmin = () => {
             <div className="relative w-1/2">
               <input
                 type="text"
-                placeholder="Cari Review"
+                placeholder="Cari Ulasan"
                 className="w-full pl-10 pr-3 py-2 border rounded"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -158,8 +158,8 @@ const UserAdmin = () => {
               <tr className="border-b">
                 <th className="text-left p-2 text-black">No</th>
                 <th className="text-left p-2 text-black">Email</th>
-                <th className="text-left p-2 text-black">Tempat</th>
-                <th className="text-left p-2 text-black">Review</th>
+                <th className="text-left p-2 text-black">Kost</th>
+                <th className="text-left p-2 text-black">Ulasan</th>
                 <th className="text-left p-2 text-black">Aksi</th>
               </tr>
             </thead>
@@ -167,7 +167,7 @@ const UserAdmin = () => {
               <tr className="border-b">
                 <td className="p-2 text-black">1</td>
                 <td className="p-2 text-black">fathul@gmail.com</td>
-                <td className="p-2 text-black">Kupiku Coffee Umbulharjo</td>
+                <td className="p-2 text-black">Kost Harmoni Seturan</td>
                 <td className="p-2 text-black">Bagus Sekali</td>
                 <td className="p-2">
                   <div className="flex space-x-2">

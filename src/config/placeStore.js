@@ -27,6 +27,8 @@ const usePlaceStore = create((set) => ({
       formData.append("address", place.address);
       formData.append("googleMapsLink", place.googleMapsLink);
       formData.append("image", place.image);
+      formData.append("roomPrice", place.roomPrice);
+      formData.append("roomStatus", place.roomStatus);
 
       const { data } = await axiosInstance.post("/place", formData, {
         headers: {
@@ -49,6 +51,8 @@ const usePlaceStore = create((set) => ({
       formData.append("googleMapsLink", updatedPlace.googleMapsLink);
       formData.append("address", updatedPlace.address);
       formData.append("image", updatedPlace.image);
+      formData.append("roomPrice", updatedPlace.roomPrice);
+      formData.append("roomStatus", updatedPlace.roomStatus);
 
       const { data } = await axiosInstance.put(`/place/${id}`, formData, {
         headers: {

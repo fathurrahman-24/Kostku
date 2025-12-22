@@ -9,12 +9,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="mb-6 md:mb-0">
             <h1 className="text-2xl font-bold">
-              FindYour<span className="text-black">Place</span>
+              Kost<span className="text-black">ku</span>
             </h1>
             <p className="mt-2">
-              Nongkrong Jadi Lebih Seru
+              Cari kost jadi lebih mudah
               <br />
-              Dengan Pilihan Tempat Yang Pas Dan Suasana Yang Asik!
+              dengan pilihan yang tepat dan informasi lengkap.
             </p>
           </div>
           <div className="flex flex-col lg:flex-col  md:gap-10">
@@ -23,7 +23,7 @@ const Footer = () => {
                 Beranda
               </Link>
               <Link to="/daftar-tempat" className="hover:underline">
-                Daftar Tempat
+                Daftar Kost
               </Link>
               <Link to="/tentang-kami" className="hover:underline">
                 Tentang Kami
@@ -47,10 +47,10 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 md:mt-10 text-center md:text-left">
           <p className="text-sm">
-            Dibuat Oleh FindYourPlace © 2024. All Rights Reserved.
+            Dibuat oleh Kostku © 2024. All Rights Reserved.
           </p>
           <Link className="text-sm mt-4 md:mt-0 hover:underline">
-            findYourplace@gmail.com
+            halo@kostku.id
           </Link>
         </div>
       </div>

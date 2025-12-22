@@ -45,8 +45,8 @@ const KontakKami = () => {
           textAlign="center"
           mb={9}
         >
-          Jika Anda memiliki pertanyaan atau ingin memberikan masukan, kami sangat menghargainya. 
-          Silakan hubungi kami melalui kontak yang tertera atau formulir di bawah ini.
+          Jika Anda memiliki pertanyaan atau ingin memberi masukan, kami sangat
+          menghargainya. Silakan hubungi kami melalui kontak di bawah ini.
         </Text>
 
         <Box 
@@ -65,28 +65,28 @@ const KontakKami = () => {
                   <MapPinned size={24} color="#AD5738" />
                   <Text fontSize="xl" fontWeight="bold" ml={3}>Alamat</Text>
                 </Flex>
-                <Text fontSize="md" ml={10}>Jl. CozyFinders, No. 03, Kelurahan VocaBee, Kecamatan FS-B, Yogyakarta</Text>
+                <Text fontSize="md" ml={10}>Jl. Kostku No. 10, Sleman, Yogyakarta</Text>
 
                 {/* Telepon */}
                 <Flex align="center">
                   <Phone size={24} color="#AD5738" />
                   <Text fontSize="xl" fontWeight="bold" ml={3}>Telepon</Text>
                 </Flex>
-                <Text fontSize="md" ml={10}>(0283) 1188271</Text>
+                <Text fontSize="md" ml={10}>(0274) 123456</Text>
 
                 {/* Email */}
                 <Flex align="center">
                   <Mail size={24} color="#AD5738" />
                   <Text fontSize="xl" fontWeight="bold" ml={3}>Email</Text>
                 </Flex>
-                <Text fontSize="md" ml={10}>findyourplace@gmail.com</Text>
+                <Text fontSize="md" ml={10}>halo@kostku.id</Text>
 
                 {/* WhatsApp */}
                 <Flex align="center">
                   <PhoneCall size={24} color="#AD5738" />
                   <Text fontSize="xl" fontWeight="bold" ml={3}>WhatsApp</Text>
                 </Flex>
-                <Text fontSize="md" ml={10}>+62 811 2345 6789</Text>
+                <Text fontSize="md" ml={10}>+62 812 3456 7890</Text>
               </Stack>
             </Box>
       </Container>

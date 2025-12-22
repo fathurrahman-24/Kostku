@@ -15,8 +15,8 @@ const DetailReview = () => {
     const dummyReview = {
       nomor: 1,
       name: "Sarah Amelia",
-      place: "Kupiku Coffee",
-      review: "Tempatnya sangat nyaman dan estetik.",
+      place: "Kost Harmoni Seturan",
+      review: "Kostnya nyaman, bersih, dan lokasinya strategis.",
       rating: "Bagus sekali",
       createdAt: "2024-12-07",
     };
@@ -37,7 +37,7 @@ const DetailReview = () => {
 
         {/* Main Panel */}
         <div className="bg-white flex-1 rounded-lg p-7 ml-8">
-          <h2 className="text-3xl font-bold mb-4">Detail Review</h2>
+          <h2 className="text-3xl font-bold mb-4">Detail Ulasan</h2>
           {review ? (
             <div className="flex flex-col space-y-4">
               <div className="flex items-center">
@@ -58,7 +58,7 @@ const DetailReview = () => {
               </div>
               <div className="flex items-center">
                 <label className="font-bold text-gray-600 w-[150px]">
-                  Nama Tempat:
+                  Nama Kost:
                 </label>
                 <div className="flex-1 bg-white border border-black p-4 rounded-lg">
                   <p className="text-black">{review.place}</p>
@@ -66,7 +66,7 @@ const DetailReview = () => {
               </div>
               <div className="flex items-center">
                 <label className="font-bold text-gray-600 w-[150px]">
-                  Isi Review:
+                  Isi Ulasan:
                 </label>
                 <div className="flex-1 bg-white border border-black p-4 rounded-lg">
                   <p className="text-black">{review.review}</p>
@@ -97,7 +97,7 @@ const DetailReview = () => {
                     navigate("/edit-review", { state: { review } })
                   }
                 >
-                  <FaEdit className="inline-block mr-2" /> Edit Review
+                  <FaEdit className="inline-block mr-2" /> Edit Ulasan
                 </button>
                 <button
                   onClick={() => navigate("/review-admin")}

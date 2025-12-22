@@ -67,7 +67,7 @@ const Sidebar = () => {
         justifyContent={"flex-start"}
         onClick={() => navigate("/admin/admin-place")}
       >
-        <MdOutlinePlace /> Places
+        <MdOutlinePlace /> Kost
       </Button>
       <Button
         p={"4"}
@@ -78,7 +78,7 @@ const Sidebar = () => {
         justifyContent={"flex-start"}
         onClick={() => navigate("/admin/review-admin")}
       >
-        <IoIosChatbubbles /> Reviews
+        <IoIosChatbubbles /> Ulasan
       </Button>
       <Button
         w={"130px"}

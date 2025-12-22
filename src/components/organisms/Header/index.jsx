@@ -21,7 +21,7 @@ const Header = () => {
             to="/daftar-tempat"
             className="text-gray-700 text-sm hover:text-[#c66e4e]"
           >
-            Daftar Tempat
+            Daftar Kost
           </Link>
           <Link
             to="/tentang-kami"
@@ -40,7 +40,7 @@ const Header = () => {
             to="/profile"
             className="text-gray-700 text-sm hover:text-[#c66e4e]"
           >
-            Profile
+            Profil
           </Link>
         </nav>
 
@@ -69,7 +69,7 @@ const Header = () => {
               to="/daftar-tempat"
               className="text-gray-700 text-sm font-medium hover:text-[#c66e4e]"
             >
-              Daftar Tempat
+              Daftar Kost
             </Link>
             <Link
               to="/tentang-kami"

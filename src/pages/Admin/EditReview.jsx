@@ -10,7 +10,7 @@ const EditReview = () => {
   const navigate = useNavigate();
   const [editableReview, setEditableReview] = useState(null);
 
-  const places = ["Kupiku Coffee", "Blanco Coffee", "Oppio Coffee"]; // Dummy data for places
+  const places = ["Kost Harmoni Seturan", "Kost Sakura Gejayan", "Kost Senja Babarsari"]; // Dummy data for places
   const users = [
     "Sarah Amelia",
     "Budi Nugraha",
@@ -23,8 +23,8 @@ const EditReview = () => {
     const dummyReview = {
       nomor: 1,
       name: "Sarah Amelia",
-      place: "Kupiku Coffee",
-      review: "Tempatnya sangat nyaman dan estetik.",
+      place: "Kost Harmoni Seturan",
+      review: "Kostnya nyaman, bersih, dan lokasinya strategis.",
       rating: "Bagus sekali",
       createdAt: "2024-12-07",
     };
@@ -62,7 +62,7 @@ const EditReview = () => {
 
         {/* Main Panel */}
         <div className="bg-white flex-1 rounded-lg p-7 ml-8">
-          <h2 className="text-3xl font-bold mb-4">Edit Review</h2>
+          <h2 className="text-3xl font-bold mb-4">Edit Ulasan</h2>
           {editableReview ? (
             <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
               <div className="flex items-center">
@@ -97,7 +97,7 @@ const EditReview = () => {
               </div>
               <div className="flex items-center">
                 <label className="font-bold text-gray-600 w-[150px]">
-                  Nama Tempat:
+                  Nama Kost:
                 </label>
                 <select
                   name="place"
@@ -114,7 +114,7 @@ const EditReview = () => {
               </div>
               <div className="flex items-center">
                 <label className="font-bold text-gray-600 w-[150px]">
-                  Isi Review:
+                  Isi Ulasan:
                 </label>
                 <textarea
                   name="review"

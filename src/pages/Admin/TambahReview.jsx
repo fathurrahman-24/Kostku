@@ -9,7 +9,7 @@ import { Sidebar } from "../../components/organisms";
 const TambahReview = () => {
   const navigate = useNavigate();
 
-  const places = ["Kupiku Coffee", "Blanco Coffee", "Oppio Coffee"]; // Dummy data for places
+  const places = ["Kost Harmoni Seturan", "Kost Sakura Gejayan", "Kost Senja Babarsari"]; // Dummy data for places
   const users = [
     "Sarah Amelia",
     "Budi Nugraha",
@@ -72,7 +72,7 @@ const TambahReview = () => {
 
         {/* Main Panel */}
         <div className="bg-white flex-1 rounded-lg p-7 ml-8">
-          <h2 className="text-3xl font-bold mb-4">Tambah Review</h2>
+          <h2 className="text-3xl font-bold mb-4">Tambah Ulasan</h2>
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <div className="flex items-center">
               <label className="font-bold text-gray-600 w-[150px]">
@@ -109,18 +109,18 @@ const TambahReview = () => {
               </select>
             </div>
             <div className="flex items-center">
-              <label className="font-bold text-gray-600 w-[150px]">
-                Nama Tempat:
-              </label>
-              <select
-                name="place"
-                value={review.place}
-                onChange={handleChange}
-                className="flex-1 bg-white border border-black p-4 rounded-lg"
-              >
-                <option value="" disabled>
-                  Pilih Place
-                </option>
+                <label className="font-bold text-gray-600 w-[150px]">
+                Nama Kost:
+                </label>
+                <select
+                  name="place"
+                  value={review.place}
+                  onChange={handleChange}
+                  className="flex-1 bg-white border border-black p-4 rounded-lg"
+                >
+                  <option value="" disabled>
+                  Pilih Kost
+                  </option>
                 {places.map((place) => (
                   <option key={place} value={place}>
                     {place}
@@ -129,13 +129,13 @@ const TambahReview = () => {
               </select>
             </div>
             <div className="flex items-center">
-              <label className="font-bold text-gray-600 w-[150px]">
-                Isi Review:
-              </label>
+                <label className="font-bold text-gray-600 w-[150px]">
+                Isi Ulasan:
+                </label>
               <textarea
                 name="review"
                 value={review.review}
-                placeholder="Isi Review"
+                placeholder="Isi Ulasan"
                 onChange={handleChange}
                 className="flex-1 bg-white border border-black p-4 rounded-lg"
               />
@@ -177,13 +177,13 @@ const TambahReview = () => {
 
             {/* Action Buttons */}
             <div className="flex justify-center w-full mt-4">
-              <button
-                type="submit"
-                className="bg-[#C66E4E] text-white px-4 py-2 rounded mr-4"
-              >
-                <FaSave className="inline-block mr-2" />
-                Simpan Review
-              </button>
+                <button
+                  type="submit"
+                  className="bg-[#C66E4E] text-white px-4 py-2 rounded mr-4"
+                >
+                  <FaSave className="inline-block mr-2" />
+                Simpan Ulasan
+                </button>
               <button
                 onClick={() => navigate("/review-admin")}
                 className="bg-gray-300 text-black px-4 py-2 rounded"

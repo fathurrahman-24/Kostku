@@ -93,18 +93,18 @@ const fetchUserReviews = async () => {
               </div>
             </div>
 
-            {/* Tabel Review */}
+            {/* Tabel Ulasan */}
             <div className="w-full mt-6">
-              <h3 className="text-2xl font-bold mb-4">Reviews</h3>
+              <h3 className="text-2xl font-bold mb-4">Ulasan</h3>
               {loading ? (
-                <p>Loading reviews...</p>
+                <p>Memuat ulasan...</p>
               ) : (
                 <table className="min-w-full border-collapse border border-gray-300">
                   <thead>
                     <tr>
                       <th className="border border-gray-300 px-4 py-2">Rating</th>
-                      <th className="border border-gray-300 px-4 py-2">Comment</th>
-                      <th className="border border-gray-300 px-4 py-2">Date</th>
+                      <th className="border border-gray-300 px-4 py-2">Komentar</th>
+                      <th className="border border-gray-300 px-4 py-2">Tanggal</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -118,7 +118,7 @@ const fetchUserReviews = async () => {
                       ))
                     ) : (
                       <tr>
-                        <td colSpan="3" className="border border-gray-300 px-4 py-2 text-center">No reviews found</td>
+                        <td colSpan="3" className="border border-gray-300 px-4 py-2 text-center">Belum ada ulasan</td>
                       </tr>
                     )}
                   </tbody>

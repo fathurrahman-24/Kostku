@@ -22,6 +22,7 @@ import UserTambah from "../pages/Admin/UserTambah.jsx";
 import PlacesAdmin from "../pages/Admin/PlaceAdmin.jsx";
 import AllPlace from "../pages/Admin/AllPlace.jsx";
 import ReviewTempat from "../pages/Daftar Tempat/ReviewTempat.jsx";
+import Pemesanan from "../pages/Pemesanan";
 import RegisterAdmin from "../pages/Admin/Register.jsx";
 import LoginAdmin from "../pages/Admin/Login.jsx";
 import { ProtectedRoute } from "../components/organisms";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/review-tempat/:id",
         element: <ReviewTempat />,
+      },
+      {
+        path: "/pemesanan/:id",
+        element: <Pemesanan />,
       },
       {
         path: "/profile",

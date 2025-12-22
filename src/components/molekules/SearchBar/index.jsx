@@ -33,7 +33,7 @@ const SearchBar = ({ value, onChange }) => {
     <div className="flex relative">
       <Input
         className="flex-grow w-full shadow-md text-black shadow-zinc-600 border bg-white"
-        placeholder="Cari Tempat Nongkrong"
+        placeholder="Cari Kost"
         value={value}
         onChange={onChange}
         onKeyDown={handleKeyDown}

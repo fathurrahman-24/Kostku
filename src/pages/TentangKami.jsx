@@ -25,42 +25,42 @@ const TentangKami = () => {
   const missionItems = [
     {
       Icon: MapPin,
-      title: "Menjadi Panduan Utama",
+      title: "Menjadi Panduan Kost Terpercaya",
       description:
-        "Membantu kamu menemukan tempat nongkrong terbaik yang sesuai kebutuhanmu, dari ruang kerja nyaman hingga lokasi santai bersama teman.",
+        "Membantu kamu menemukan kost yang nyaman, strategis, dan sesuai kebutuhan, dari dekat kampus hingga akses mudah ke kantor.",
     },
     {
       Icon: Hand,
-      title: "Meningkatkan Koneksi Sosial",
+      title: "Meningkatkan Kenyamanan Tinggal",
       description:
-        "Mendukung momen kebersamaan dengan pilihan tempat yang pas untuk interaksi dan relaksasi.",
+        "Mendorong pengalaman tinggal yang aman dan nyaman lewat informasi fasilitas, aturan, dan ulasan yang jelas.",
     },
     {
       Icon: Building2,
-      title: "Mendukung usaha lokal",
+      title: "Mendukung Pemilik Kost",
       description:
-        "Membantu usaha lokal di Yogyakarta mendapatkan visibilitas lebih besar melalui platform kami.",
+        "Membantu pemilik kost di Yogyakarta mendapatkan visibilitas lebih luas melalui platform kami.",
     },
   ];
 
   const whyChooseItems = [
     {
       Icon: MessageCircleQuestion,
-      title: "Memiliki beragam pilihan",
+      title: "Pilihan Kost Beragam",
       description:
-        "Temukan berbagai tempat nongkrong yang sesuai dengan kebutuhanmu, mulai dari yang tenang hingga yang seru.",
+        "Temukan kost putra, putri, atau campur dengan pilihan harga dan fasilitas yang fleksibel.",
     },
     {
       Icon: Info,
       title: "Memiliki Informasi Lengkap dan Terpercaya",
       description:
-        "Setiap tempat dilengkapi dengan deskripsi detail, alamat lengkap, dan tautan langsung ke Google Maps.",
+        "Setiap kost dilengkapi deskripsi detail, foto, alamat lengkap, dan tautan langsung ke Google Maps.",
     },
     {
       Icon: Star,
       title: "Ulasan Terpercaya",
       description:
-        "Baca ulasan dari pengunjung sebelumnya untuk memudahkanmu memilih tempat yang tepat.",
+        "Baca ulasan penghuni sebelumnya untuk memudahkanmu memilih kost yang tepat.",
     },
   ];
 
@@ -136,12 +136,12 @@ const TentangKami = () => {
           textAlign="center"
           mb={8}
         >
-          Nongkrong bukan hanya soal waktu luang, tapi tentang menciptakan momen
-          bermakna. Bersama{" "}
+          Tinggal nyaman bukan hanya soal lokasi, tapi tentang menciptakan
+          keseharian yang tenang dan produktif. Bersama{" "}
           <Text as="span" color="orange.600" fontWeight="bold">
-            FindYourPlace
+            Kostku
           </Text>
-          , kami membantu mewujudkan moment berhargamu.
+          , kami membantu mewujudkan tempat tinggal yang kamu butuhkan.
         </Text>
         <SectionHeader title="Misi Kami" />
         <Box mt={4}>
@@ -161,12 +161,12 @@ const TentangKami = () => {
         >
           Bersama{" "}
           <Text as="span" color="orange.600" fontWeight="bold">
-            FindYourPlace
+            Kostku
           </Text>
-          , pengalaman nongkrongmu jadi lebih mudah dan menyenangkan.
+          , proses cari kost jadi lebih mudah dan menyenangkan.
         </Text>
         <SectionHeader
-          title="Telusuri Sekarang"
+          title="Lihat Daftar Kost"
           isButton
           onClick={() => navigate("/daftar-tempat")}
         />

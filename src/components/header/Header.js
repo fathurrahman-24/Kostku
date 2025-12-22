@@ -4,11 +4,11 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">FindYourPlace</div>
+      <div className="logo">Kostku</div>
       <nav>
         <ul>
           <li>Beranda</li>
-          <li>Daftar Tempat</li>
+          <li>Daftar Kost</li>
           <li>Tentang Kami</li>
           <li>Kontak</li>
         </ul>

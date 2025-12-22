@@ -22,7 +22,7 @@ const DaftarTempat = ({ _id }) => {
           <div className="lg:w-[660px] sm:w-auto m-auto mb-10">
             <Input
               className=" flex-grow w-full shadow-md text-black shadow-zinc-600 border bg-white"
-              placeholder="search tempat nongkrongmu...."
+              placeholder="Cari kost idamanmu...."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -30,12 +30,12 @@ const DaftarTempat = ({ _id }) => {
           <h2 className="text-2xl md:text-3xl text-black font-bold text-left">
             <span className="mr-3">⭐</span>
             Temukan{" "}
-            <span className="text-[#a04925] ml-3 mr-1">tempat nongkrong</span>
+            <span className="text-[#a04925] ml-3 mr-1">kost</span>
             favoritmu
           </h2>
         </div>
 
-        {/* Daftar Tempat */}
+        {/* Daftar Kost */}
 
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredPlaces.map((place, index) => (
