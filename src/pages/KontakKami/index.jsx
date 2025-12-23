@@ -86,7 +86,7 @@ const KontakKami = () => {
                   <PhoneCall size={24} color="#AD5738" />
                   <Text fontSize="xl" fontWeight="bold" ml={3}>WhatsApp</Text>
                 </Flex>
-                <Text fontSize="md" ml={10}>+62 812 3456 7890</Text>
+                <Text fontSize="md" ml={10}>+62 821 6344 8197</Text>
               </Stack>
             </Box>
       </Container>
